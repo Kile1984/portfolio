@@ -1,0 +1,11 @@
+@keyframes grow-line {
+  0% {
+    transform: translateY(0);
+    height: 0;
+  }
+
+  100% {
+    height: 60px;
+    transform: translateY(100px);
+  }
+}

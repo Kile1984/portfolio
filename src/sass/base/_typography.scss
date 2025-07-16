@@ -1,0 +1,96 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+
+.heading-group {
+  display: grid;
+  line-height: 1.1;
+
+  h1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / -1;
+  }
+
+  h2 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / -1;
+    align-self: center;
+
+    @include respond.respond(tab-port) {
+      margin-top: 4rem;
+    }
+  }
+
+  p {
+    grid-row: 2 / span 1;
+    grid-column: 1/-1;
+  }
+}
+
+.title {
+  font-family: "Mulish", sans-serif;
+
+  text-transform: uppercase;
+  font-weight: 900;
+
+  &--black {
+    color: vars.$color-black;
+  }
+
+  &--white {
+    color: vars.$color-white;
+  }
+
+  &--light {
+    font-weight: 100;
+  }
+
+  &__stroke {
+    -webkit-text-stroke: 1px vars.$color-black;
+  }
+
+  &__big {
+    font-size: 9.6rem;
+  }
+
+  &__medium {
+    font-size: 4.4rem;
+
+    @include respond.respond(phone) {
+      font-size: 5.2rem;
+    }
+  }
+
+  &__small {
+    font-size: 2.4rem;
+  }
+
+  &__back {
+    font-size: 10rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(vars.$color-black, 0.1);
+    color: vars.$color-white;
+
+    @include respond.respond(tab-port) {
+      font-size: 14rem;
+    }
+
+    @include respond.respond(tab-land) {
+      font-size: 18rem;
+    }
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  color: vars.$color-silver;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: vars.$color-silver;
+  line-height: 2;
+}

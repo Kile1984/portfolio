@@ -1,0 +1,30 @@
+@use "../abstract/variables" as vars;
+
+.btn {
+  &--black {
+    background-color: vars.$color-black;
+    color: vars.$color-white;
+    border: 2px solid vars.$color-black;
+
+    &:hover {
+      background-color: vars.$color-white;
+      color: vars.$color-black;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 2.4rem 8rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+}

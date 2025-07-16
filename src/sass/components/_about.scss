@@ -1,0 +1,75 @@
+@use "../abstract/mixins" as respond;
+
+.about {
+  @include respond.respond(tab-port) {
+    column-gap: 4.2rem;
+  }
+
+  &__image {
+    background-image: url(../../assets/images/about.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+    @include respond.respond(tab-port) {
+      height: 70%;
+      background-size: cover;
+    }
+  }
+
+  &__divider {
+    margin-top: 4rem;
+  }
+
+  &__info {
+    margin-bottom: 8rem;
+
+    P:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__skills {
+    column-gap: 3.2rem;
+
+    @include respond.respond(tab-port) {
+      grid-column: 1/-1;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond.respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-box {
+      grid-template-columns: min-content 1fr;
+      gap: 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+
+        @include respond.respond(tab-land) {
+          margin-bottom: 0;
+        }
+      }
+      p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+
+    &-title {
+      grid-column: 2/-1;
+      align-self: center;
+    }
+
+    &-text {
+      grid-column: 1/-1;
+
+      @include respond.respond(tab-port) {
+        grid-column: 2 / span 1;
+      }
+    }
+  }
+}
