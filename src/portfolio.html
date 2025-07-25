@@ -15,17 +15,8 @@
       crossorigin=""
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="icon"
-      href="../src/assets/images/favicon.png"
-      type="image/png"
-      sizes="32x32"
-    />
-
     <script defer src="./js/main.js"></script>
-    <script defer src="./js/map.js"></script>
-    <script defer src="./js/form.js"></script>
-    <title>Home | Ilija ZIkic</title>
+    <title>Portfolio | Ilija ZIkic</title>
   </head>
   <body class="container grid">
     <!-- HEADER -->
@@ -43,10 +34,9 @@
       <svg class="icon hamburger__close">
         <use xlink:href="assets/icons/symbol-defs.svg#icon-close"></use>
       </svg>
-
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item active">
+          <li class="nav__item">
             <a href="index.html" class="nav__link">Home </a>
             <span class="border-top"></span>
             <span class="border-right"></span>
@@ -60,7 +50,7 @@
             <span class="border-bottom"></span>
             <span class="border-left"></span>
           </li>
-          <li class="nav__item">
+          <li class="nav__item active">
             <a href="portfolio.html" class="nav__link">Portfolio </a>
             <span class="border-top"></span>
             <span class="border-right"></span>
@@ -78,94 +68,8 @@
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero grid mb-big">
-      <div class="hero__heading">
-        <h2 class="hero__title title title__big">
-          <span class="title__stroke title--white">AAAA</span>
-          <span class="title--black">ŽikiAAAAAć</span>
-        </h2>
-        <p class="subtitle">Front-end developer</p>
-      </div>
-
-      <div class="hero__person"></div>
-
-      <div class="line"></div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about grid mb-big">
-      <div class="about__image"></div>
-
-      <div class="about__right">
-        <div class="heading-group about__heading mb-medium">
-          <h1 class="title title__back">About</h1>
-          <h2 class="title title__medium title--black">Ilija Žikić</h2>
-          <p class="subtitle">Creative Front-end Developer</p>
-          <div class="divider about__divider"></div>
-        </div>
-
-        <div class="about__info mt-medium">
-          <p class="text">
-            Hello everybody! My name is Ilija Žikić. I am a Web Developer, and
-            I'm very passionate and dedicated to my work.
-          </p>
-          <p class="text">
-            With 5 years experience as a professional Web developer, I have
-            acquired the skills and knowledge necessary to make your project a
-            success. I enjoy every step of the design process, from discussion
-            and collaboration.
-          </p>
-
-          <a href="about.html" class="btn btn--black about__btn mt-medium"
-            >Learn More</a
-          >
-        </div>
-      </div>
-
-      <div class="about__skills grid">
-        <div class="about__skills-box grid">
-          <svg class="icon">
-            <use xlink:href="assets/icons/symbol-defs.svg#icon-html5"></use>
-          </svg>
-          <h3 class="title title__small about__skills-title">HTML</h3>
-          <p class="text about__skills-text">
-            I write HTML code carefully and clearly, with a focus on readability
-            and structure. My organized approach allows me to create clean and
-            easily maintainable websites.
-          </p>
-        </div>
-
-        <div class="about__skills-box grid">
-          <svg class="icon">
-            <use xlink:href="assets/icons/symbol-defs.svg#icon-css31"></use>
-          </svg>
-          <h3 class="title title__small about__skills-title">CSS</h3>
-          <p class="text about__skills-text">
-            I use CSS and SCSS to create modern, responsive, and visually
-            appealing designs. I write styles in a clean and modular way, with
-            careful planning of structure and code reusability.
-          </p>
-        </div>
-
-        <div class="about__skills-box grid">
-          <svg class="icon">
-            <use
-              xlink:href="assets/icons/symbol-defs.svg#icon-node-dot-js"
-            ></use>
-          </svg>
-          <h3 class="title title__small about__skills-title">Java Script</h3>
-          <p class="text about__skills-text">
-            JavaScript is my favorite for building dynamic and interactive
-            websites. I know the concept of OOP and MVC, and I'm especially
-            interested in React, Node.js, and MongoDB.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- PORTFOLIO -->
-    <section class="portfolio grid mb-big">
+    <section class="portfolio grid mb-big bg-none">
       <div class="heading-group portfolio__heading mb-medium">
         <h1 class="title title__back">Portfolio</h1>
         <h2 class="title title__medium title--black">Featured works</h2>
@@ -268,57 +172,6 @@
           </a>
         </div>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact grid mb-big">
-      <div class="heading-group contact__heading">
-        <h1 class="title title__back">Contact</h1>
-        <h2 class="title title__medium title--black">Get in touch</h2>
-      </div>
-
-      <form class="form grid">
-        <div class="form__group">
-          <label class="form__label" for="name">Name</label>
-          <input
-            type="text"
-            class="form__input"
-            id="name"
-            placeholder="Name"
-            required
-          />
-        </div>
-
-        <div class="form__group">
-          <label class="form__label" for="mail">Mail</label>
-          <input
-            type="email"
-            class="form__input"
-            id="mail"
-            placeholder="Email"
-            required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          />
-        </div>
-        <div class="form__group">
-          <label for="" class="form__label">Message</label>
-          <textarea
-            name="message"
-            class="form__textarea"
-            id="messsage"
-            placeholder="Message"
-            required
-          ></textarea>
-        </div>
-
-        <input
-          class="btn btn--black form__submit"
-          type="submit"
-          value="Submit message"
-        />
-      </form>
-
-      <div id="map" class="map"></div>
     </section>
 
     <!-- FOOTER -->

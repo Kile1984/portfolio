@@ -3,7 +3,7 @@
 
 .heading-group {
   display: grid;
-  line-height: 1.1;
+  line-height: 0.7;
 
   h1 {
     grid-row: 1 / span 2;
@@ -75,7 +75,7 @@
     }
 
     @include respond.respond(tab-land) {
-      font-size: 18rem;
+      font-size: 16rem;
     }
   }
 }
@@ -93,4 +93,8 @@
   font-family: "Poppins", sans-serif;
   color: vars.$color-silver;
   line-height: 2;
+
+  &--dark {
+    font-weight: 900;
+  }
 }

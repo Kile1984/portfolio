@@ -1,0 +1,22 @@
+@use "../../abstract/variables" as vars;
+@use "../../abstract/mixins" as respond;
+
+.skills {
+  grid-template-columns: 1fr 1fr;
+
+  &__heading {
+    grid-column: 1/-1;
+  }
+
+  &__wrap {
+    display: grid;
+  }
+
+  &__box {
+    grid-column: 1/-1;
+  }
+
+  &__progress {
+    font-size: 16px;
+  }
+}

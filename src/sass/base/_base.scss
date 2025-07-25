@@ -37,4 +37,10 @@ body {
   grid-template-columns:
     [full-start] 2rem [center-start] repeat(6, [col-start] 1fr [col-end])
     [center-end] 2rem [full-end];
+
+  @include respond.respond(tab-port) {
+    grid-template-columns:
+      [full-start] 12rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 12rem [full-end];
+  }
 }
