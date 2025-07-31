@@ -1,6 +1,8 @@
 @use "../../abstract/mixins" as respond;
 
 .about {
+  row-gap: 6rem;
+
   @include respond.respond(tab-port) {
     column-gap: 4.2rem;
   }

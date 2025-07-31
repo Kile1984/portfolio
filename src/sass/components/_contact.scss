@@ -3,10 +3,11 @@
 
 .contact {
   &__heading {
-    margin-bottom: 4rem;
-    @include respond.respond(tab-port) {
-      grid-column: 1/-1;
-    }
+    grid-column: 1/-1;
+  }
+
+  &__text {
+    grid-column: 1/-1;
   }
 
   .form {
@@ -27,6 +28,7 @@
       display: none;
     }
 
+    // FORM
     &__input {
       font-size: 1.8rem;
       width: 100%;
@@ -34,15 +36,18 @@
       font-family: "Poppins", sans-serif;
       padding: 1.2rem 2rem;
 
-      border: 1px solid vars.$color-silver;
+      border: 1px solid rgba(vars.$color-silver, 0.3);
 
       &:focus {
-        border-bottom: 1px solid green;
         outline: none;
       }
 
-      &:focus:invalid {
-        border-bottom: 1px solid red;
+      &.valid {
+        border: 1px solid rgba(green, 0.3);
+      }
+
+      &.invalid {
+        border: 1px solid rgba(red, 0.3);
       }
     }
 
@@ -52,15 +57,10 @@
       width: 100%;
       height: 200px;
       padding: 1.2rem 2rem;
-      border: 1px solid vars.$color-silver;
+      border: 1px solid rgba(vars.$color-silver, 0.3);
 
       &:focus {
         outline: none;
-        border-bottom: 1px solid green;
-      }
-
-      &:focus:invalid {
-        border-bottom: 1px solid red;
       }
     }
 

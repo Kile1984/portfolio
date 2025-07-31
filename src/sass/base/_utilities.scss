@@ -1,5 +1,6 @@
 @use "../abstract/animation";
 @use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
 
 .grid {
   display: grid;
@@ -22,19 +23,23 @@
 }
 
 .mtb-big {
-  margin: 9.6rem 0 9.6rem 0;
+  margin: 12.8rem 0 12.8rem 0;
+
+  @include respond.respond(tab-land) {
+    margin: 24rem 0 24rem 0;
+  }
 }
 
 .mb-big {
-  margin-bottom: 9.6rem;
+  margin-bottom: 12.8rem;
+
+  @include respond.respond(tab-land) {
+    margin-bottom: 24rem;
+  }
 }
 
 .mb-medium {
-  margin-bottom: 4rem;
-}
-
-.mb-small {
-  margin-bottom: 2rem;
+  margin-bottom: 8.6rem;
 }
 
 .mt-medium {

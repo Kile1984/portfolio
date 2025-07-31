@@ -33,33 +33,35 @@ body {
 .container {
   grid-template-columns: [full-start] 2rem [center-start] repeat(6, [col-start] 1fr [col-end]) [center-end] 2rem [full-end];
 }
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 75em) {
   .container {
     grid-template-columns: [full-start] 12rem [center-start] repeat(6, [col-start] 1fr [col-end]) [center-end] 12rem [full-end];
   }
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .heading-group {
   display: grid;
+  grid-template-rows: repeat(5, 1fr);
   line-height: 0.7;
 }
 .heading-group h1 {
-  grid-row: 1/span 2;
   grid-column: 1/-1;
+  grid-row: 1/span 5;
 }
 .heading-group h2 {
-  grid-row: 1/span 2;
+  grid-row: 3/span 1;
   grid-column: 1/-1;
-  align-self: center;
-}
-@media only screen and (min-width: 56.25em) {
-  .heading-group h2 {
-    margin-top: 4rem;
-  }
+  margin-left: 0.66rem;
 }
 .heading-group p {
-  grid-row: 2/span 1;
+  grid-row: 5/span 1;
   grid-column: 1/-1;
+  margin-top: 1rem;
 }
 
 .title {
@@ -80,34 +82,19 @@ body {
   -webkit-text-stroke: 1px #000;
 }
 .title__big {
-  font-size: 9.6rem;
+  font-size: 8.6rem;
 }
 .title__medium {
   font-size: 4.4rem;
-}
-@media only screen and (min-width: 37.5em) {
-  .title__medium {
-    font-size: 5.2rem;
-  }
 }
 .title__small {
   font-size: 2.4rem;
 }
 .title__back {
-  font-size: 10rem;
+  font-size: 16rem;
   text-transform: uppercase;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
   color: #fff;
-}
-@media only screen and (min-width: 56.25em) {
-  .title__back {
-    font-size: 14rem;
-  }
-}
-@media only screen and (min-width: 75em) {
-  .title__back {
-    font-size: 16rem;
-  }
 }
 
 .subtitle {
@@ -159,19 +146,25 @@ body {
 }
 
 .mtb-big {
-  margin: 9.6rem 0 9.6rem 0;
+  margin: 12.8rem 0 12.8rem 0;
+}
+@media only screen and (min-width: 75em) {
+  .mtb-big {
+    margin: 24rem 0 24rem 0;
+  }
 }
 
 .mb-big {
-  margin-bottom: 9.6rem;
+  margin-bottom: 12.8rem;
+}
+@media only screen and (min-width: 75em) {
+  .mb-big {
+    margin-bottom: 24rem;
+  }
 }
 
 .mb-medium {
-  margin-bottom: 4rem;
-}
-
-.mb-small {
-  margin-bottom: 2rem;
+  margin-bottom: 8.6rem;
 }
 
 .mt-medium {
@@ -273,6 +266,20 @@ body {
 .nav__item:not(:last-child) {
   margin-right: 1rem;
 }
+.nav__item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 56.25em) {
+  .nav__item:hover::before {
+    display: none;
+  }
+}
 @media only screen and (min-width: 56.25em) {
   .nav__item .border-top {
     position: absolute;
@@ -339,8 +346,24 @@ body {
     opacity: 0;
   }
 }
-.nav__item.active {
-  border: 2px solid #000;
+@media only screen and (min-width: 56.25em) {
+  .nav__item.active {
+    border: 2px solid #000;
+  }
+}
+.nav__item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #000;
+}
+@media only screen and (min-width: 56.25em) {
+  .nav__item.active::before {
+    display: none;
+  }
 }
 .nav__link, .nav__link:link, .nav__link:visited {
   position: relative;
@@ -530,6 +553,9 @@ body {
   grid-column: 1/-1;
 }
 
+.about {
+  row-gap: 6rem;
+}
 @media only screen and (min-width: 56.25em) {
   .about {
     column-gap: 4.2rem;
@@ -600,14 +626,27 @@ body {
   }
 }
 
+@media only screen and (min-width: 56.25em) {
+  .portfolio {
+    padding: 8.6rem 0;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .portfolio {
+    padding: 16rem 0;
+  }
+}
 .portfolio__heading {
-  grid-column: 2/span 1;
+  grid-column: 2/-1;
   grid-row: 1/span 1;
 }
 @media only screen and (min-width: 56.25em) {
   .portfolio__heading {
     grid-column: 2/span 2;
   }
+}
+.portfolio__heading h1 {
+  color: transparent;
 }
 .portfolio__link {
   display: block;
@@ -645,14 +684,16 @@ body {
 }
 @media only screen and (min-width: 56.25em) {
   .portfolio__projects {
-    grid-column: 2/span 2;
+    grid-column: 2/span 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    column-gap: 6rem;
+    row-gap: 4rem;
   }
 }
 @media only screen and (min-width: 75em) {
   .portfolio__projects {
+    grid-column: 2/span 2;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -721,12 +762,10 @@ body {
 }
 
 .contact__heading {
-  margin-bottom: 4rem;
+  grid-column: 1/-1;
 }
-@media only screen and (min-width: 56.25em) {
-  .contact__heading {
-    grid-column: 1/-1;
-  }
+.contact__text {
+  grid-column: 1/-1;
 }
 .contact .form {
   grid-column: 1/-1;
@@ -749,14 +788,16 @@ body {
   height: 6rem;
   font-family: "Poppins", sans-serif;
   padding: 1.2rem 2rem;
-  border: 1px solid #767676;
+  border: 1px solid rgba(118, 118, 118, 0.3);
 }
 .contact .form__input:focus {
-  border-bottom: 1px solid green;
   outline: none;
 }
-.contact .form__input:focus:invalid {
-  border-bottom: 1px solid red;
+.contact .form__input.valid {
+  border: 1px solid rgba(0, 128, 0, 0.3);
+}
+.contact .form__input.invalid {
+  border: 1px solid rgba(255, 0, 0, 0.3);
 }
 .contact .form textarea {
   font-size: 1.8rem;
@@ -764,14 +805,10 @@ body {
   width: 100%;
   height: 200px;
   padding: 1.2rem 2rem;
-  border: 1px solid #767676;
+  border: 1px solid rgba(118, 118, 118, 0.3);
 }
 .contact .form textarea:focus {
   outline: none;
-  border-bottom: 1px solid green;
-}
-.contact .form textarea:focus:invalid {
-  border-bottom: 1px solid red;
 }
 .contact .form__submit {
   cursor: pointer;
@@ -816,7 +853,7 @@ body {
   grid-column: full-start/full-end;
   grid-template-columns: 2rem 1fr 2rem;
 }
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 75em) {
   .hero {
     grid-template-columns: 12rem 1fr 12rem;
   }
@@ -840,6 +877,10 @@ body {
 @media only screen and (min-width: 56.25em) {
   .portfolio {
     background-color: rgba(229, 229, 229, 0.2);
+  }
+}
+@media only screen and (min-width: 75em) {
+  .portfolio {
     grid-template-columns: 12rem repeat(2, 1fr) 12rem;
   }
 }
@@ -862,7 +903,7 @@ body {
 }
 @media only screen and (min-width: 56.25em) {
   .footer {
-    grid-template-columns: 12rem 1fr 1fr 12rem;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
   }
 }
 @media only screen and (min-width: 75em) {

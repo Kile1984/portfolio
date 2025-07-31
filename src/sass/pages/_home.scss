@@ -18,7 +18,7 @@
   grid-column: full-start/full-end;
   grid-template-columns: 2rem 1fr 2rem;
 
-  @include respond.respond(tab-port) {
+  @include respond.respond(tab-land) {
     grid-template-columns: 12rem 1fr 12rem;
   }
 }
@@ -39,6 +39,9 @@
 
   @include respond.respond(tab-port) {
     background-color: rgba(vars.$bg-silver, 0.2);
+  }
+
+  @include respond.respond(tab-land) {
     grid-template-columns: 12rem repeat(2, 1fr) 12rem;
   }
 }
@@ -59,7 +62,7 @@
   grid-template-columns: 2rem 1fr 2rem;
 
   @include respond.respond(tab-port) {
-    grid-template-columns: 12rem 1fr 1fr 12rem;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
   }
 
   @include respond.respond(tab-land) {

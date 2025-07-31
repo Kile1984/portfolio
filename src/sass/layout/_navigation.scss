@@ -49,9 +49,22 @@
       margin-right: 1rem;
     }
 
+    &:hover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: rgba(vars.$color-black, 0.2);
+
+      @include respond.respond(tab-port) {
+        display: none;
+      }
+    }
+
     //animate borders
     @include respond.respond(tab-port) {
-      // animate navigation
       .border-top {
         position: absolute;
         top: 0;
@@ -134,7 +147,23 @@
     }
 
     &.active {
-      border: 2px solid vars.$color-black;
+      @include respond.respond(tab-port) {
+        border: 2px solid vars.$color-black;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: vars.$color-black;
+
+        @include respond.respond(tab-port) {
+          display: none;
+        }
+      }
     }
   }
 
