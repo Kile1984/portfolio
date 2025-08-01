@@ -2,12 +2,14 @@
 
 .about {
   row-gap: 6rem;
+  grid-template-columns: 2rem 1fr 2rem;
 
   @include respond.respond(tab-port) {
     column-gap: 4.2rem;
   }
 
   &__image {
+    grid-column: 1/-1;
     background-image: url(../../assets/images/about.webp);
     background-position: top center;
     background-repeat: no-repeat;
@@ -18,6 +20,10 @@
       height: 70%;
       background-size: cover;
     }
+  }
+
+  &__right {
+    grid-column: 1/-1;
   }
 
   &__divider {
@@ -34,9 +40,9 @@
 
   &__skills {
     column-gap: 3.2rem;
+    grid-column: 1/-1;
 
     @include respond.respond(tab-port) {
-      grid-column: 1/-1;
       grid-template-columns: repeat(2, 1fr);
     }
 

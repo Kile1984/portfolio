@@ -266,20 +266,6 @@ body {
 .nav__item:not(:last-child) {
   margin-right: 1rem;
 }
-.nav__item:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-@media only screen and (min-width: 56.25em) {
-  .nav__item:hover::before {
-    display: none;
-  }
-}
 @media only screen and (min-width: 56.25em) {
   .nav__item .border-top {
     position: absolute;
@@ -555,6 +541,7 @@ body {
 
 .about {
   row-gap: 6rem;
+  grid-template-columns: 2rem 1fr 2rem;
 }
 @media only screen and (min-width: 56.25em) {
   .about {
@@ -562,6 +549,7 @@ body {
   }
 }
 .about__image {
+  grid-column: 1/-1;
   background-image: url(../../assets/images/about.webp);
   background-position: top center;
   background-repeat: no-repeat;
@@ -574,6 +562,9 @@ body {
     background-size: cover;
   }
 }
+.about__right {
+  grid-column: 1/-1;
+}
 .about__divider {
   margin-top: 4rem;
 }
@@ -585,10 +576,10 @@ body {
 }
 .about__skills {
   column-gap: 3.2rem;
+  grid-column: 1/-1;
 }
 @media only screen and (min-width: 56.25em) {
   .about__skills {
-    grid-column: 1/-1;
     grid-template-columns: repeat(2, 1fr);
   }
 }
