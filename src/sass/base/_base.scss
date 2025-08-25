@@ -12,18 +12,19 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 43.7%; //1rem=7px
 
-  @include respond.respond(phone) {
+  @include respond.respond(tab-port) {
     font-size: 50%; //1rem=8px
   }
 
-  @include respond.respond(tab-port) {
-    font-size: 56.25%; //1rem=9px
-  }
-
-  @include respond.respond(tab-land) {
+  @include respond.respond(big-desktop) {
     font-size: 62.5%; //1rem=10px
   }
 }
@@ -40,12 +41,13 @@ body {
 
   @include respond.respond(tab-land) {
     grid-template-columns:
+      [full-start] 6rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 6rem [full-end];
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns:
       [full-start] 12rem [center-start] repeat(6, [col-start] 1fr [col-end])
       [center-end] 12rem [full-end];
   }
-}
-
-html,
-body {
-  overflow-x: hidden;
 }

@@ -1,8 +1,8 @@
-const submit = document.querySelector(".form__submit");
+const form = document.querySelector(".form");
 const inputs = document.querySelectorAll(".form__input");
 const textarea = document.querySelector(".form__textarea");
 
-submit.addEventListener("click", function (e) {
+form.addEventListener("sumbit", function (e) {
   e.preventDefault();
 
   [...inputs].map((i) => {

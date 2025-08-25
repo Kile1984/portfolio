@@ -6,6 +6,10 @@
   display: grid;
 }
 
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
 .pb-small {
   padding-bottom: 1.2rem;
 }
@@ -44,6 +48,10 @@
 
 .mt-medium {
   margin-top: 4rem;
+}
+
+.mt-large {
+  margin-top: 16rem;
 }
 
 .bg-none {

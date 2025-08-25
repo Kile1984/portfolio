@@ -25,7 +25,7 @@
     transform: scale(0);
   }
 
-  @include respond.respond(tab-port) {
+  @include respond.respond(tab-land) {
     display: none;
   }
 }

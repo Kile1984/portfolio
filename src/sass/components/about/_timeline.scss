@@ -1,0 +1,59 @@
+@use "../../abstract/variables" as vars;
+@use "../../abstract/mixins" as respond;
+
+.timeline {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.8rem;
+
+  &__title {
+    grid-column: 1/-1;
+  }
+
+  &__box {
+    grid-template-columns: 150px repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 4rem;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    @include respond.respond(tab-land) {
+      grid-column: auto;
+    }
+  }
+
+  &__year {
+    grid-column: 1 / span 1;
+    grid-row: 1 / -1;
+    align-content: center;
+
+    color: vars.$color-white;
+
+    background-color: vars.$color-silver;
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 50px;
+
+    &--education {
+      background-color: vars.$color-blue;
+    }
+  }
+
+  &__heading {
+    grid-column: 2 / -1;
+    grid-row: 1 / span 1;
+
+    font-weight: 600;
+  }
+
+  &__description {
+    color: vars.$color-silver;
+    grid-column: 2 / -1;
+    grid-row: 2 / span 1;
+
+    &--education {
+      color: vars.$color-blue;
+    }
+  }
+}

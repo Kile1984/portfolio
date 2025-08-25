@@ -1,9 +1,11 @@
 @use "../../abstract/mixins" as respond;
 
 .about-me {
+  margin-top: 16rem;
+
   &__image {
     grid-column: 1 / -1;
-    background-image: url(../../assets/images/about.webp);
+    background-image: url(../../assets/images/ilija_zikic.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
@@ -20,8 +22,10 @@
   }
 
   &__subtitle {
-    grid-row: 3 / span 1 !important;
+    grid-row: 4 / span 1 !important;
+    align-self: start;
     line-height: 1.7;
+    margin: 0 !important;
   }
 
   &__info {

@@ -1,3 +1,5 @@
+@use "../../abstract/mixins" as respond;
+
 .hero {
   position: relative;
 
@@ -16,12 +18,21 @@
     }
   }
   &__person {
-    background-image: url(../../assets/images/hero.webp);
+    background-image: url(../../assets/images/hero_small_phone.png);
     background-size: cover;
-    background-position: bottom;
+    background-position: top center;
     height: 100vh;
 
     grid-row: 1/-1;
     grid-column: 1/-1;
+    opacity: 0.8;
+
+    @include respond.respond(tab-port) {
+      background-image: url(../../assets/images/hero_small.png);
+    }
+
+    @include respond.respond(big-desktop) {
+      background-image: url(../../assets/images/hero.png);
+    }
   }
 }
