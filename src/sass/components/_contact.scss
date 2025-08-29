@@ -32,6 +32,7 @@
       height: 6rem;
       font-family: "Poppins", sans-serif;
       padding: 1.2rem 2rem;
+      transition: all 0.5s;
 
       border: 1px solid rgba(vars.$color-silver, 0.3);
 
@@ -40,11 +41,11 @@
       }
 
       &.valid {
-        border: 1px solid rgba(green, 0.3);
+        border: 1px solid vars.$color-success;
       }
 
       &.invalid {
-        border: 1px solid rgba(red, 0.3);
+        border: 1px solid vars.$color-error;
       }
     }
 
@@ -55,6 +56,15 @@
       height: 200px;
       padding: 1.2rem 2rem;
       border: 1px solid rgba(vars.$color-silver, 0.3);
+      transition: all 0.5s;
+
+      &.valid {
+        border: 1px solid vars.$color-success;
+      }
+
+      &.invalid {
+        border: 1px solid vars.$color-error;
+      }
 
       &:focus {
         outline: none;
