@@ -829,16 +829,17 @@ body {
   height: 6rem;
   font-family: "Poppins", sans-serif;
   padding: 1.2rem 2rem;
+  transition: all 0.5s;
   border: 1px solid rgba(118, 118, 118, 0.3);
 }
 .contact .form__input:focus {
   outline: none;
 }
 .contact .form__input.valid {
-  border: 1px solid rgba(0, 128, 0, 0.3);
+  border: 1px solid #3ddd80;
 }
 .contact .form__input.invalid {
-  border: 1px solid rgba(255, 0, 0, 0.3);
+  border: 1px solid #f11010;
 }
 .contact .form textarea {
   font-size: 1.8rem;
@@ -847,6 +848,13 @@ body {
   height: 200px;
   padding: 1.2rem 2rem;
   border: 1px solid rgba(118, 118, 118, 0.3);
+  transition: all 0.5s;
+}
+.contact .form textarea.valid {
+  border: 1px solid #3ddd80;
+}
+.contact .form textarea.invalid {
+  border: 1px solid #f11010;
 }
 .contact .form textarea:focus {
   outline: none;
