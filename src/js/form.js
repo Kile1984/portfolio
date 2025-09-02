@@ -3,46 +3,37 @@ const inputs = document.querySelectorAll(".form__input");
 const textarea = document.querySelector(".form__textarea");
 
 // RESET FIELDS
-
 const reset = () => {
-  inputs.forEach((input) => {
-    input.classList.remove("valid");
-    input.value = "";
+  form.reset();
+
+  [...inputs, textarea].forEach((field) => {
+    field.classList.remove("valid", "invalid");
   });
-  textarea.value = "";
-  textarea.classList.remove("valid");
 };
 
 // TOGGLE CLASS
 const toggleClass = (field, isValid) => {
-  field.classList.toggle("valid", isValid);
-  field.classList.toggle("invalid", !isValid);
+  field.classList.remove("valid", "invalid");
+  field.classList.add(isValid ? "valid" : "invalid");
 };
 
-// VALIDATE INPUT FIELDS
-const validateInput = (input) => {
-  let isValid = true;
-  const pattern = input.getAttribute("pattern");
+// VALIDATE FIELDS
+const regexCache = {};
 
-  if (input.value.trim() === "") isValid = false;
+const validateField = (field) => {
+  let isValid = true;
+
+  const pattern = field.getAttribute("pattern");
+
+  if (field.value.trim() === "") isValid = false;
 
   if (pattern) {
-    const regex = new RegExp(pattern);
-    isValid = regex.test(input.value);
+    if (!regexCache[pattern]) regexCache[pattern] = new RegExp(pattern);
+
+    isValid = regexCache[pattern].test(field.value);
   }
 
-  toggleClass(input, isValid);
-
-  return isValid;
-};
-
-// VALIDATE TEXAREA
-const validTexArea = (texarea) => {
-  let isValid = true;
-
-  if (texarea.value.trim() === "") isValid = false;
-
-  toggleClass(texarea, isValid);
+  toggleClass(field, isValid);
 
   return isValid;
 };
@@ -53,20 +44,14 @@ form.addEventListener("submit", (e) => {
 
   let isFormValid = true;
 
-  inputs.forEach((input) => {
-    if (!validateInput(input)) isFormValid = false;
+  [...inputs, textarea].forEach((field) => {
+    if (!validateField(field)) isFormValid = false;
   });
-
-  if (!validTexArea(textarea)) isFormValid = false;
 
   if (isFormValid) reset();
 });
 
 // VALIDATE ON INPUT CHANGE
-inputs.forEach((input) => {
-  input.addEventListener("input", () => validateInput(input));
-});
-
-textarea.addEventListener("input", () => {
-  validTexArea(textarea);
+[...inputs, textarea].forEach((field) => {
+  field.addEventListener("input", () => validateField(field));
 });
