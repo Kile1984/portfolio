@@ -88,7 +88,13 @@
       <form class="form grid">
         <div class="form__group">
           <label class="form__label" for="name">Name</label>
-          <input type="text" class="form__input" id="name" placeholder="Name" />
+          <input
+            type="text"
+            class="form__input"
+            id="name"
+            name="form_name"
+            placeholder="Name"
+          />
         </div>
 
         <div class="form__group">
@@ -97,6 +103,7 @@
             type="email"
             class="form__input"
             id="mail"
+            name="form_mail"
             placeholder="Email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
@@ -104,7 +111,7 @@
         <div class="form__group">
           <label for="" class="form__label">Message</label>
           <textarea
-            name="message"
+            name="form_message"
             class="form__textarea"
             id="messsage"
             placeholder="Message"
