@@ -1,3 +1,5 @@
+emailjs.init("NwFs8-ayjGt7h_vHa");
+
 const form = document.querySelector(".form");
 const inputs = document.querySelectorAll(".form__input");
 const textarea = document.querySelector(".form__textarea");
@@ -48,7 +50,16 @@ form.addEventListener("submit", (e) => {
     if (!validateField(field)) isFormValid = false;
   });
 
-  if (isFormValid) reset();
+  if (isFormValid) {
+    emailjs
+      .sendForm("service_0ty3ug4", "template_gnl22q5", form)
+      .then(() => {
+        reset();
+      })
+      .catch((error) => {
+        alert("❌ Greška pri slanju: " + error.text);
+      });
+  }
 });
 
 // VALIDATE ON INPUT CHANGE
