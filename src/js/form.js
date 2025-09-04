@@ -64,14 +64,11 @@ form.addEventListener("submit", (e) => {
       .then(() => {
         reset();
 
-        const message = document.createElement("h2");
-        message.textContent = "Hvala što ste me kontaktirali!";
-        form.appendChild(message);
-
-        console.log(form);
+        window.location.href = "thank-you.html";
       })
       .catch((error) => {
         alert("❌ Greška pri slanju: " + error.text);
+        window.location.href = "error.html";
       });
   }
 });
