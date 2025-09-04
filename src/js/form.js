@@ -63,6 +63,12 @@ form.addEventListener("submit", (e) => {
       .sendForm("service_0ty3ug4", "template_gnl22q5", form)
       .then(() => {
         reset();
+
+        const message = document.createElement("h2");
+        message.textContent = "Hvala što ste me kontaktirali!";
+        form.appendChild(message);
+
+        console.log(form);
       })
       .catch((error) => {
         alert("❌ Greška pri slanju: " + error.text);
