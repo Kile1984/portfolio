@@ -50,6 +50,14 @@ form.addEventListener("submit", (e) => {
     if (!validateField(field)) isFormValid = false;
   });
 
+  const params = {
+    form_name: form.form_name.value,
+    form_mail: form.form_mail.value,
+    form_message: form.form_message.value,
+  };
+
+  console.log(params);
+
   if (isFormValid) {
     emailjs
       .sendForm("service_0ty3ug4", "template_gnl22q5", form)
