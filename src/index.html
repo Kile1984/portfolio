@@ -28,6 +28,35 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>Home | Ilija ZIkic</title>
   </head>
+
+  ////////////
+   <style>
+     
+
+      .banner {
+        width: 728px;
+        height: 90px;
+        position: relative;
+        font-family: Arial, sans-serif;
+      }
+
+      .banner img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .click-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    </style>
+  
   <body class="container grid">
     <!-- HEADER -->
     <header class="header grid pb-small mtb-small">
@@ -93,6 +122,12 @@
 
       <div class="line"></div>
     </section>
+
+    ///////////
+     <div class="banner">
+      <img src="728x90v1.png" alt="Banner" />
+      <div class="click-area" onclick="window.open(clickTag)"></div>
+    </div>
 
     <!-- ABOUT -->
     <section class="about grid mb-big">
@@ -437,5 +472,10 @@
         </a>
       </div>
     </footer>
+    /////////
+     <script>
+      var clickTag = "https://www.youtube.com/watch?v=-T1Yo7dsjTs";
+    </script>
   </body>
 </html>
+
