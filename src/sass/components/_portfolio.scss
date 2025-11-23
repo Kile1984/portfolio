@@ -1,8 +1,9 @@
-//portfolio
+
 @use "../abstract/variables" as vars;
 @use "../abstract/mixins" as respond;
 
 .portfolio {
+  //portfolio
   @include respond.respond(tab-port) {
     padding: 8.6rem 0;
   }
@@ -192,6 +193,7 @@
     display: none;
   }
 }
+
 
 
 
