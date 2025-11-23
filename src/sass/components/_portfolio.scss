@@ -82,9 +82,13 @@
       gap: 4rem 6rem;
     }
 
+     @include respond.respond(tab-port) {
+      grid-column: 2 / span 3;
+    }
+
     @include respond.respond(big-desktop) {
       grid-template-columns: 1fr 1fr 1fr;
-      grid-column: 2 / span 3;
+     // grid-column: 2 / span 3;
     }
   }
 
@@ -187,5 +191,6 @@
     display: none;
   }
 }
+
 
 
