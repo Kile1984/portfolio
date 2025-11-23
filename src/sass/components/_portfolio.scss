@@ -3,9 +3,9 @@
 @use "../abstract/mixins" as respond;
 
 .portfolio {
-  //portfolio
   @include respond.respond(tab-port) {
     padding: 8.6rem 0;
+     //portfolio
   }
 
   @include respond.respond(tab-land) {
@@ -193,6 +193,7 @@
     display: none;
   }
 }
+
 
 
 
