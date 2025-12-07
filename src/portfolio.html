@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      href="/assets/images/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <script defer src="./js/main.js"></script>
+    <title>Portfolio | Ilija ZIkic</title>
+  </head>
+  <body class="container grid">
+    <!-- HEADER -->
+    <header class="header grid pb-small mtb-small">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="./assets/images/logo.png" alt="Logo" class="logo__img" />
+        </a>
+      </div>
+
+      <svg class="icon hamburger">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-menu"></use>
+      </svg>
+
+      <svg class="icon hamburger__close">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-close"></use>
+      </svg>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item active">
+            <a href="portfolio.html" class="nav__link">Portfolio </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio grid mb-big bg-none pb-0">
+      <div class="heading-group portfolio__heading mb-medium">
+        <h1 class="title title__back">Portfolio</h1>
+        <h2 class="title title__medium title--black">Featured works</h2>
+      </div>
+
+      <div class="portfolio__projects">
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-mapty.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/mapty.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Mapty</span>
+                <span class="title--dark">App</span>
+                <span class="title--light portfolio__technologies"
+                  >JS, OOP, Leaflet
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-bankist.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/bankist.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Bankist</span>
+                <span class="title--dark">App</span>
+                <span class="title--light portfolio__technologies">JS </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-dairy.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/barn.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">My</span>
+                <span class="title--dark">Barn</span>
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid, JS
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-sweet-cake.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/sweet-cake.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Sweet</span>
+                <span class="title--dark">Cake</span>
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid, JS
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-omnifood.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/omnifood.png"
+                alt=""
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Omnifood</span>
+                <!-- <span class="title--dark">Site</span> -->
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-natours.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/natours.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Natours</span>
+                <!-- <span class="title--dark">Barn</span> -->
+                <span class="title--light portfolio__technologies"
+                  >Responsive images, Float Grid, SCSS</span
+                >
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-bankist-site.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/bankist-site.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Bankist</span>
+                <!-- <span class="title--dark">Site</span> -->
+                <span class="title--light portfolio__technologies"
+                  >JS, SCSS, Grid
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-quess-game.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/guess.png"
+                alt="?"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Guess</span>
+                <span class="title--dark">Number</span>
+                <span class="title--light portfolio__technologies">JS </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-pig-game.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/dice.png"
+                alt="?"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Pig</span>
+                <span class="title--dark">Game</span>
+                <span class="title--light portfolio__technologies">JS </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer grid ptb-medium">
+      <div class="footer__author">
+        <h3 class="title">Ilija Žikić</h3>
+        <h3 class="title">Front-end Developer</h3>
+      </div>
+
+      <address class="footer__address title">
+        <span>Hopovska,</span>
+        <span>Belgrade</span>
+        <span>Serbia</span>
+      </address>
+
+      <address class="footer__contact text">
+        <a class="title" href="tel:+381604285248">+381 60 428 52 48</a><br />
+        <a class="title" href="mailto:zikicilija@gmail.com"
+          >zikicilija@gmail.com</a
+        >
+      </address>
+
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+          <svg class="icon footer__linkedin">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__github">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-github"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__git">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-git"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

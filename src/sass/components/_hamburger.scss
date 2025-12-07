@@ -1,0 +1,41 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+
+.hamburger,
+.hamburger__close {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+
+  width: 30px;
+  height: 30px;
+  fill: vars.$color-black;
+  cursor: pointer;
+  z-index: 12;
+
+  justify-self: end;
+  align-self: center;
+  transition: all 0.3s;
+
+  &__close {
+    width: 40px;
+    height: 40px;
+
+    right: 0;
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  @include respond.respond(tab-land) {
+    display: none;
+  }
+}
+
+.hamburger.open {
+  transform: scale(0) rotate(360deg);
+}
+
+.hamburger__close.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}

@@ -1,0 +1,47 @@
+@use "../../abstract/mixins" as respond;
+
+.about-me {
+  margin-top: 16rem;
+
+  &__image {
+    grid-column: 1 / -1;
+    background-image: url(../../assets/images/ilija_zikic.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 390px;
+
+    @include respond.respond(tab-port) {
+      grid-column: 1 / span 1;
+      height: auto;
+    }
+  }
+
+  &__divider {
+    margin-top: 4rem;
+  }
+
+  &__subtitle {
+    grid-row: 4 / span 1 !important;
+    align-self: start;
+    line-height: 1.7;
+    margin: 0 !important;
+  }
+
+  &__info {
+    grid-column: 1 / -1;
+
+    @include respond.respond(tab-port) {
+      grid-column: 2 / span 1;
+    }
+  }
+
+  .about-me-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.2rem;
+
+    @include respond.respond(tab-land) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}

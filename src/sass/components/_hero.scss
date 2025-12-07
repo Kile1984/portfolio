@@ -1,0 +1,27 @@
+.hero {
+  position: relative;
+  &__heading {
+    grid-row: 2/-1;
+    grid-column: 2 / span 1;
+    align-content: center;
+    z-index: 10;
+  }
+
+  &__title {
+    span {
+      display: block;
+      line-height: 1.1;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &__person {
+    background-image: url(../../assets/images/hero.webp);
+    background-size: cover;
+    background-position: bottom;
+    height: 120vh;
+
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+}
+

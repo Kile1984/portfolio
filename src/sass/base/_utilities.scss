@@ -1,0 +1,81 @@
+@use "../abstract/animation";
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+
+.grid {
+  display: grid;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pb-small {
+  padding-bottom: 1.2rem;
+}
+
+.ptb-medium {
+  padding: 8.6rem 0;
+}
+
+.pr-none {
+  padding-right: 0 !important;
+}
+
+.mtb-small {
+  margin: 1.2rem 0 1.2rem 0;
+}
+
+.mtb-big {
+  margin: 12.8rem 0 12.8rem 0;
+
+  @include respond.respond(tab-land) {
+    margin: 24rem 0 24rem 0;
+  }
+}
+
+.mb-big {
+  margin-bottom: 12.8rem;
+
+  @include respond.respond(tab-land) {
+    margin-bottom: 24rem;
+  }
+}
+
+.mb-medium {
+  margin-bottom: 8.6rem;
+}
+
+.mt-medium {
+  margin-top: 4rem;
+}
+
+.mt-large {
+  margin-top: 16rem;
+}
+
+.bg-none {
+  background-color: transparent !important;
+}
+
+.line {
+  width: 1px;
+  background-color: vars.$color-black;
+  position: absolute;
+  left: 10px;
+
+  bottom: 20%;
+  height: 30px;
+  animation: grow-line 2s ease-out infinite forwards;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(vars.$color-silver, 0.2);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}

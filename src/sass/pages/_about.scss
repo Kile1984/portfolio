@@ -1,0 +1,32 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+@use "../components/about/about-me.scss";
+@use "../components/about/skills.scss";
+@use "../components/about/timeline.scss";
+
+.about-me {
+  grid-column: center-start/center-end;
+}
+
+.skills {
+  grid-column: center-start/center-end;
+  grid-template-columns: 1fr;
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    column-gap: 18rem;
+  }
+}
+
+.timeline {
+  grid-column: center-start/center-end;
+  grid-template-columns: 1fr;
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

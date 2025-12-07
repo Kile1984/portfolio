@@ -1,0 +1,85 @@
+@use "../../abstract/mixins" as respond;
+
+.about {
+  row-gap: 6rem;
+
+  @include respond.respond(tab-port) {
+    column-gap: 6rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    row-gap: 12.8rem;
+  }
+
+  &__image {
+    grid-column: 1/-1;
+    width: 100%;
+
+    @include respond.respond(tab-port) {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__right {
+    grid-column: 1 / span 1;
+
+    @include respond.respond(tab-port) {
+      grid-column: 2 / span 1;
+    }
+  }
+
+  &__divider {
+    margin-top: 4rem;
+  }
+
+  &__info {
+    margin-bottom: 8rem;
+
+    P:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__skills {
+    column-gap: 3.2rem;
+    grid-column: 1/-1;
+
+    @include respond.respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond.respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-box {
+      grid-template-columns: min-content 1fr;
+      gap: 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+
+        @include respond.respond(tab-land) {
+          margin-bottom: 0;
+        }
+      }
+      p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+
+    &-title {
+      grid-column: 2/-1;
+      align-self: center;
+    }
+
+    &-text {
+      grid-column: 1/-1;
+
+      @include respond.respond(tab-port) {
+        grid-column: 2 / span 1;
+      }
+    }
+  }
+}

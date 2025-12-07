@@ -1,0 +1,38 @@
+@use "../../abstract/mixins" as respond;
+
+.hero {
+  position: relative;
+
+  &__heading {
+    grid-row: 2/-1;
+    grid-column: 2 / span 1;
+    align-content: center;
+    z-index: 10;
+  }
+
+  &__title {
+    span {
+      display: block;
+      line-height: 1.1;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &__person {
+    background-image: url(../../assets/images/hero_small_phone.png);
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    opacity: 0.8;
+
+    @include respond.respond(tab-port) {
+      background-image: url(../../assets/images/hero_small.png);
+    }
+
+    @include respond.respond(big-desktop) {
+      background-image: url(../../assets/images/hero.png);
+    }
+  }
+}

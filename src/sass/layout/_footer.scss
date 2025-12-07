@@ -1,0 +1,86 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+
+.footer {
+  font-size: 1.6rem;
+  color: vars.$color-white;
+  font-family: "Poppins", sans-serif;
+  row-gap: 4.2rem;
+
+  &__author {
+    grid-column: 2 / span 1;
+  }
+
+  &__address {
+    grid-column: 2 / span 1;
+    font-weight: 100;
+    font-style: normal;
+
+    @include respond.respond(tab-land) {
+      grid-column: 3 / span 1;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    grid-column: 2 / span 1;
+
+    @include respond.respond(tab-port) {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+      text-align: right;
+    }
+
+    @include respond.respond(tab-land) {
+      grid-column: 3 / span 1;
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      font-style: normal;
+      text-transform: lowercase;
+      font-weight: 100;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__social {
+    grid-column: 2 / span 1;
+    text-align: center;
+
+    a {
+      display: inline-block;
+    }
+
+    a:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    @include respond.respond(tab-port) {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+      text-align: right;
+    }
+
+    @include respond.respond(tab-land) {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .icon {
+      fill: vars.$color-white;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        fill: vars.$color-silver;
+      }
+    }
+  }
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      href="/assets/images/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer src="./js/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <title>Home | Ilija ZIkic</title>
+  </head>
+
+ 
+  
+  <body class="container grid">
+    <!-- HEADER -->
+    <header class="header grid pb-small mtb-small">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="./assets/images/logo.png" alt="Logo" class="logo__img" />
+        </a>
+      </div>
+
+      <svg class="icon hamburger">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-menu"></use>
+      </svg>
+
+      <svg class="icon hamburger__close">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-close"></use>
+      </svg>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item active">
+            <a href="index.html" class="nav__link">Home </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav__link">Portfolio </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero grid mb-big">
+      <div class="hero__heading">
+        <h2 class="hero__title title title__big">
+          <span class="title__stroke title--white">Ilija</span>
+          <span class="title--black">Žikić</span>
+        </h2>
+        <p class="subtitle">Front-end developer</p>
+      </div>
+
+      <div class="hero__person"></div>
+
+      <div class="line"></div>
+    </section>
+
+    
+    <!-- ABOUT -->
+    <section class="about grid mb-big">
+      <img src="./assets/images/ilija_zikic.jpg" alt="" class="about__image" />
+
+      <div class="about__right grid">
+        <div class="heading-group about__heading">
+          <h1 class="title title__back">About</h1>
+          <h2 class="title title__medium title--black">Ilija Žikić</h2>
+          <p class="subtitle">Creative Front-end Developer</p>
+          <div class="divider about__divider"></div>
+        </div>
+
+        <div class="about__info mt-medium">
+          <p class="text">
+            Hello everybody! My name is Ilija Žikić. I am a Web Developer, and
+            I'm very passionate and dedicated to my work.
+          </p>
+          <p class="text">
+            With 5 years experience as a professional Web developer, I have
+            acquired the skills and knowledge necessary to make your project a
+            success. I enjoy every step of the design process, from discussion
+            and collaboration.
+          </p>
+
+          <a href="about.html" class="btn btn--black about__btn mt-medium"
+            >Learn More</a
+          >
+        </div>
+      </div>
+
+      <div class="about__skills grid">
+        <div class="about__skills-box grid">
+          <svg class="icon">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-html5"></use>
+          </svg>
+          <h3 class="title title__small about__skills-title">HTML</h3>
+          <p class="text about__skills-text">
+            I write HTML code carefully and clearly, with a focus on readability
+            and structure. My organized approach allows me to create clean and
+            easily maintainable websites.
+          </p>
+        </div>
+
+        <div class="about__skills-box grid">
+          <svg class="icon">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-css31"></use>
+          </svg>
+          <h3 class="title title__small about__skills-title">CSS</h3>
+          <p class="text about__skills-text">
+            I use CSS and SCSS to create modern, responsive, and visually
+            appealing designs. I write styles in a clean and modular way, with
+            careful planning of structure and code reusability.
+          </p>
+        </div>
+
+        <div class="about__skills-box grid">
+          <svg class="icon">
+            <use
+              xlink:href="assets/icons/symbol-defs.svg#icon-node-dot-js"
+            ></use>
+          </svg>
+          <h3 class="title title__small about__skills-title">Java Script</h3>
+          <p class="text about__skills-text">
+            JavaScript is my favorite for building dynamic and interactive
+            websites. I know the concept of OOP and MVC, and I'm especially
+            interested in React, Node.js, and MongoDB.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio grid mb-big">
+      <div class="heading-group portfolio__heading mb-medium">
+        <h1 class="title title__back">Portfolio</h1>
+        <h2 class="title title__medium title--black">Featured works</h2>
+      </div>
+
+      <div class="portfolio__projects">
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-mapty.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/mapty.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Mapty</span>
+                <span class="title--dark">App</span>
+                <span class="title--light portfolio__technologies"
+                  >JS, OOP, Leaflet
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-bankist.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/bankist.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Bankist</span>
+                <span class="title--dark">App</span>
+                <span class="title--light portfolio__technologies">JS </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-dairy.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/barn.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">My</span>
+                <span class="title--dark">Barn</span>
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid, JS
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-sweet-cake.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/sweet-cake.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Sweet</span>
+                <span class="title--dark">Cake</span>
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid, JS
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-omnifood.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/omnifood.png"
+                alt=""
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Omnifood</span>
+                <!-- <span class="title--dark">Site</span> -->
+                <span class="title--light portfolio__technologies"
+                  >SCSS, Grid
+                </span>
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__project">
+          <a
+            href="https://ilija-natours.netlify.app/"
+            target="blank"
+            class="portfolio__link"
+          >
+            <div class="portfolio__bgr grid">
+              <img
+                src="./assets//images/natours.png"
+                alt="mapty"
+                class="portfolio__image"
+              />
+              <h3 class="portfolio__title title__small">
+                <span class="title--light">Natours</span>
+                <!-- <span class="title--dark">Barn</span> -->
+                <span class="title--light portfolio__technologies"
+                  >Responsive images, Float Grid, SCSS</span
+                >
+              </h3>
+
+              <img
+                class="portfolio__seal"
+                src="./assets/images/logo-cut.png"
+                alt="Logo-cut"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact grid mb-big">
+      <div class="heading-group contact__heading mb-medium">
+        <h1 class="title title__back">Contact</h1>
+        <h2 class="title title__medium title--black">Get in touch</h2>
+      </div>
+
+      <form class="form grid">
+        <div class="form__group">
+          <label class="form__label" for="name">Name</label>
+          <input
+            type="text"
+            class="form__input"
+            id="name"
+            name="form_name"
+            placeholder="Name"
+          />
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="mail">Mail</label>
+          <input
+            type="email"
+            class="form__input"
+            id="mail"
+            placeholder="Email"
+            name="form_mail"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+        </div>
+        <div class="form__group">
+          <label for="message" class="form__label">Message</label>
+          <textarea
+            name="form_message"
+            class="form__textarea"
+            id="messsage"
+            placeholder="Message"
+          ></textarea>
+        </div>
+
+        <input
+          class="btn btn--black form__submit"
+          type="submit"
+          value="Submit message"
+        />
+      </form>
+
+      <div id="map" class="map"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer grid ptb-medium">
+      <div class="footer__author">
+        <h3 class="title">Ilija Žikić</h3>
+        <h3 class="title">Front-end Developer</h3>
+      </div>
+
+      <address class="footer__address title">
+        <span>Hopovska,</span>
+        <span>Belgrade</span>
+        <span>Serbia</span>
+      </address>
+
+      <address class="footer__contact text">
+        <a class="title" href="tel:+381604285248">+381 60 428 52 48</a><br />
+        <a class="title" href="mailto:zikicilija@gmail.com"
+          >zikicilija@gmail.com</a
+        >
+      </address>
+
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+          <svg class="icon footer__linkedin">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__github">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-github"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__git">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-git"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+   
+  </body>
+</html>
+
+

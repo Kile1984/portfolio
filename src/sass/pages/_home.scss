@@ -1,0 +1,92 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+@use "../components/home/hero";
+@use "../components/home/about-home";
+@use "../components/portfolio";
+@use "../components/contact";
+
+.header {
+  grid-column: full-start/full-end;
+  grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 6rem repeat(2, 1fr) 6rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns: 12rem repeat(2, 1fr) 12rem;
+  }
+}
+
+.hero {
+  grid-column: full-start/full-end;
+  grid-template-columns: 2rem 1fr 2rem;
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 6rem 1fr 6rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns: 12rem 1fr 12rem;
+  }
+}
+
+.about {
+  grid-column: center-start/center-end;
+  grid-template-columns: 1fr;
+
+  @include respond.respond(tab-port) {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.portfolio {
+  grid-column: full-start/full-end;
+
+  grid-template-columns: 2rem 1fr 2rem;
+  row-gap: 4rem;
+
+  // @include respond.respond(phone) {
+  //   grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+  // }
+
+  @include respond.respond(tab-port) {
+    background-color: rgba(vars.$bg-silver, 0.2);
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+  }
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 6rem repeat(3, 1fr) 6rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns: 12rem repeat(2, 1fr) 12rem;
+  }
+}
+
+.contact {
+  grid-column: center-start/center-end;
+  grid-template-columns: 2rem 1fr 2rem;
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer {
+  grid-column: full-start/full-end;
+  background-color: vars.$color-black;
+  grid-template-columns: 2rem 1fr 2rem;
+
+  @include respond.respond(tab-port) {
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+  }
+
+  @include respond.respond(tab-land) {
+    grid-template-columns: 6rem repeat(3, 1fr) 6rem;
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns: 12rem repeat(3, 1fr) 12rem;
+  }
+}

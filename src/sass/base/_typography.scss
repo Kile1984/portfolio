@@ -1,0 +1,87 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins" as respond;
+
+.heading-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  line-height: 0.7;
+
+  h1 {
+    grid-column: 1/-1;
+    grid-row: 1 / span 5;
+  }
+
+  h2 {
+    grid-row: 3 / span 1;
+    grid-column: 1/-1;
+    margin-left: 0.66rem;
+  }
+
+  p {
+    grid-row: 4 / span 1;
+    grid-column: 1/-1;
+    margin-top: 1rem;
+  }
+}
+
+.title {
+  font-family: "Mulish", sans-serif;
+
+  text-transform: uppercase;
+  font-weight: 900;
+
+  &--black {
+    color: vars.$color-black;
+  }
+
+  &--white {
+    color: vars.$color-white;
+  }
+
+  &--light {
+    font-weight: 100;
+  }
+
+  &__stroke {
+    -webkit-text-stroke: 1px vars.$color-black;
+  }
+
+  &__big {
+    font-size: 8.6rem;
+  }
+
+  &__medium {
+    font-size: 4.4rem;
+  }
+
+  &__small {
+    font-size: 2.4rem;
+  }
+
+  &__back {
+    font-size: 16rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(vars.$color-black, 0.1);
+    color: vars.$color-white;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: vars.$color-silver;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: vars.$color-silver;
+  line-height: 2;
+
+  &--dark {
+    font-weight: 900;
+  }
+}

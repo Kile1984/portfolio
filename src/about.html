@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      href="/assets/images/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <script defer src="./js/main.js"></script>
+    <title>About | Ilija ZIkic</title>
+  </head>
+  <body class="container grid">
+    <!-- HEADER -->
+    <header class="header grid pb-small mtb-small">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="./assets/images/logo.png" alt="Logo" class="logo__img" />
+        </a>
+      </div>
+
+      <svg class="icon hamburger">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-menu"></use>
+      </svg>
+
+      <svg class="icon hamburger__close">
+        <use xlink:href="assets/icons/symbol-defs.svg#icon-close"></use>
+      </svg>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item active">
+            <a href="about.html" class="nav__link">About </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav__link">Portfolio </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact </a>
+            <span class="border-top"></span>
+            <span class="border-right"></span>
+            <span class="border-bottom"></span>
+            <span class="border-left"></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about-me grid mb-big">
+      <div class="about-me__right">
+        <div class="heading-group about-me__heading mb-medium">
+          <h1 class="title title__back">About</h1>
+          <h2 class="title title__medium title--black">Welcome</h2>
+        </div>
+
+        <div class="about-me-wrap grid">
+          <div class="about-me__image"></div>
+
+          <div class="about-me__info mt-medium">
+            <div class="heading-group about-me__heading mb-medium">
+              <h2 class="title title__medium title--black">Ilija Žikić</h2>
+              <p class="subtitle about-me__subtitle">
+                Creative Front-end Developer
+              </p>
+              <div class="divider about-me__divider"></div>
+            </div>
+
+            <p class="text">
+              Hello everybody! My name is Ilija Žikić. I am a Web Developer, and
+              I'm very passionate and dedicated to my work.
+            </p>
+            <p class="text">
+              With 5 years experience as a professional Web developer, I have
+              acquired the skills and knowledge necessary to make your project a
+              success. I enjoy every step of the design process, from discussion
+              and collaboration.
+            </p>
+
+            <a
+              target="_blank"
+              href="./assets/CV_Ilija_Zikic.pdf"
+              class="btn btn--black about-me__btn mt-medium"
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills grid mb-big">
+      <div class="heading-group skills__heading mb-medium">
+        <h1 class="title title__back">Skills</h1>
+        <h2 class="title title__medium title--black">Skills</h2>
+      </div>
+
+      <div class="skills__dev-wrapp">
+        <div class="skills__dev grid">
+          <span class="skills__name text">HTML</span>
+          <span class="skills__level text">85%</span>
+          <div class="skills__progress skills__progress--html"></div>
+        </div>
+
+        <div class="skills__dev grid">
+          <span class="skills__name text">CSS</span>
+          <span class="skills__level text">80%</span>
+          <div class="skills__progress skills__progress--css"></div>
+        </div>
+
+        <div class="skills__dev grid">
+          <span class="skills__name text">JavaScript</span>
+          <span class="skills__level text">65%</span>
+          <div class="skills__progress skills__progress--js"></div>
+        </div>
+      </div>
+
+      <div class="skills__lng-wrapp grid">
+        <div class="skills__lng skills__lng--ser">
+          <span class="skills__level skills__level--lng text">90%</span>
+          <span class="skills__name skills__name--lng text">Serbian</span>
+        </div>
+
+        <div class="skills__lng skills__lng--eng">
+          <span class="skills__level skills__level--lng text">65%</span>
+          <span class="skills__name skills__name--lng text">English</span>
+        </div>
+
+        <!-- <div class="skills__lng skills__lng--eng">
+          <span class="skills__level skills__level--lng text">65%</span>
+          <span class="skills__name skills__name--lng text">English</span>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="timeline grid mb-big">
+      <div class="heading-group timeline__title mb-medium">
+        <h1 class="title title__back">Timeline</h1>
+        <h2 class="title title__medium title--black">Timeline</h2>
+      </div>
+
+      <div class="timeline__box grid">
+        <p class="timeline__year timeline__year--education">1984</p>
+        <p class="timeline__heading">Born</p>
+        <p class="timeline__description timeline__description--education">
+          Bor, Serbia
+        </p>
+      </div>
+
+      <div class="timeline__box grid">
+        <p class="timeline__year timeline__year--education">1999-2003</p>
+        <p class="timeline__heading">Electrical technician</p>
+        <p class="timeline__description timeline__description--education">
+          Bore, Serbia
+        </p>
+      </div>
+
+      <div class="timeline__box grid">
+        <p class="timeline__year">2003 – 2017</p>
+        <p class="timeline__heading">Radio television Bor</p>
+        <p class="timeline__description">Video editor</p>
+      </div>
+
+      <div class="timeline__box grid">
+        <p class="timeline__year">2017 – 2018</p>
+        <p class="timeline__heading">BG Lighthouse</p>
+        <p class="timeline__description">Front-end developer</p>
+      </div>
+
+      <div class="timeline__box grid">
+        <p class="timeline__year">2020 – present</p>
+        <p class="timeline__heading">OBLAK Technology</p>
+        <p class="timeline__description">Kyocera SLA printer repairman</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer grid ptb-medium">
+      <div class="footer__author">
+        <h3 class="title">Ilija Žikić</h3>
+        <h3 class="title">Front-end Developer</h3>
+      </div>
+
+      <address class="footer__address title">
+        <span>Hopovska,</span>
+        <span>Belgrade</span>
+        <span>Serbia</span>
+      </address>
+
+      <address class="footer__contact text">
+        <a class="title" href="tel:+381604285248">+381 60 428 52 48</a><br />
+        <a class="title" href="mailto:zikicilija@gmail.com"
+          >zikicilija@gmail.com</a
+        >
+      </address>
+
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+          <svg class="icon footer__linkedin">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__github">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-github"></use>
+          </svg>
+        </a>
+
+        <a href="https://github.com/Kile1984?tab=repositories" target="_blank">
+          <svg class="icon footer__git">
+            <use xlink:href="assets/icons/symbol-defs.svg#icon-git"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

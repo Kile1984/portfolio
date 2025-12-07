@@ -1,0 +1,53 @@
+// SPACING SYSTEM (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// FONT SIZE SYSTEM (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+@use "../abstract/mixins" as respond;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 43.7%; //1rem=7px
+
+  @include respond.respond(tab-port) {
+    font-size: 50%; //1rem=8px
+  }
+
+  @include respond.respond(big-desktop) {
+    font-size: 62.5%; //1rem=10px
+  }
+}
+
+body {
+  line-height: 1.6;
+  position: relative;
+}
+
+.container {
+  grid-template-columns:
+    [full-start] 2rem [center-start] repeat(6, [col-start] 1fr [col-end])
+    [center-end] 2rem [full-end];
+
+  @include respond.respond(tab-land) {
+    grid-template-columns:
+      [full-start] 6rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 6rem [full-end];
+  }
+
+  @include respond.respond(big-desktop) {
+    grid-template-columns:
+      [full-start] 12rem [center-start] repeat(6, [col-start] 1fr [col-end])
+      [center-end] 12rem [full-end];
+  }
+}

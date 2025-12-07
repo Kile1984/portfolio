@@ -1,0 +1,6 @@
+@use "../abstract/variables" as vars;
+
+.header {
+  border-bottom: 1px solid rgba(vars.$color-silver, 0.5);
+  position: relative;
+}
