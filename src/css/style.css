@@ -1072,17 +1072,17 @@ body {
   background-color: rgba(118, 118, 118, 0.3);
 }
 .skills__progress--html {
-  width: 85%;
+  width: 90%;
   height: 6px;
   background-color: rgba(118, 118, 118, 0.8);
 }
 .skills__progress--css {
-  width: 80%;
+  width: 90%;
   height: 6px;
   background-color: rgba(118, 118, 118, 0.8);
 }
 .skills__progress--js {
-  width: 65%;
+  width: 80%;
   height: 6px;
   background-color: rgba(118, 118, 118, 0.8);
 }
